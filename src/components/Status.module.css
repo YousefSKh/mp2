@@ -1,0 +1,22 @@
+.status {
+  max-width: 32rem;
+  padding: 3rem 0;
+}
+
+.message {
+  color: var(--muted);
+}
+
+.retry {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--signal);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: var(--signal);
+}

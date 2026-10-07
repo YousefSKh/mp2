@@ -1,0 +1,139 @@
+.heading {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11rem auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.field {
+  display: block;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--panel);
+  color: var(--paper);
+  font: inherit;
+}
+
+.input:focus {
+  border-color: var(--signal);
+}
+
+.toggle {
+  display: flex;
+}
+
+.toggleButton {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.toggleButton + .toggleButton {
+  border-left: none;
+}
+
+.toggleButton:hover {
+  color: var(--paper);
+}
+
+.toggleActive {
+  border-color: var(--paper);
+  background: var(--paper);
+  color: var(--space);
+}
+
+.toggleActive:hover {
+  color: var(--space);
+}
+
+.count {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.empty {
+  padding: 2rem 0;
+  color: var(--muted);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) 7.5rem 7.5rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+}
+
+.row:hover {
+  background: var(--panel);
+}
+
+.thumb {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--panel);
+  object-fit: cover;
+}
+
+.title {
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 40rem) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 0 0.75rem;
+  }
+
+  .thumb {
+    grid-row: span 3;
+    width: 4rem;
+    height: 4rem;
+  }
+}

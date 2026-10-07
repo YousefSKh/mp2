@@ -1,0 +1,39 @@
+:root {
+  --space: #0e1a2b;
+  --panel: #16263d;
+  --rule: #2a3d57;
+  --paper: #ece8de;
+  --muted: #93a3b8;
+  --signal: #fc3d21;
+  --font-body: 'Barlow', system-ui, sans-serif;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--space);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
